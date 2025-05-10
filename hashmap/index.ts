@@ -1,4 +1,4 @@
-import MyHashMap from './myhashmap.ts'
+import { MyHashMap } from './MyHashMap'
 
 const myMap = new MyHashMap();
 myMap.put("abc", 123);

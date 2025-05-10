@@ -1,27 +1,30 @@
-import { DoublyLinkedList } from "./doublylinkedlist";
-
+import { DoublyLinkedList } from "./doublyLinkedList";
+import md5 from './hashFunctions/md5';
+ 
 class MyHashMap {
     bucketSize = 10;
-    buckets: DoublyLinkedList<string, string>[] = [];
-    hashFunc: (key: string) => number;
+    buckets: DoublyLinkedList<string, any>[] = [];
+    hashFunc: (key: string) => string;
 
-    constructor() {
+    constructor(hashFunc: (key: string) => string = md5) {
+        this.hashFunc = hashFunc;
+
         for (let i = 0; i < this.bucketSize; i++) {
-            this.buckets[i] = new DoublyLinkedList<string, string>();
+            this.buckets[i] = new DoublyLinkedList<string, any>();
         }
-        this.hashFunc = 'md5';
     }
 
-    put(key: string, value: string): void {
-        this.map.set(key, value);
+    put(key: string, value: any): void {
+
     }
 
     get(key: string): string | undefined {
-        return this.map.get(key);
+
+        return undefined;
     }
 
     remove(key: string): void {
-        this.map.delete(key);
+
     }
 }
 

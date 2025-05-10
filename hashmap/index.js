@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var myhashmap_ts_1 = require("./myhashmap.ts");
-var myMap = new myhashmap_ts_1.default();
+var MyHashMap_1 = require("./MyHashMap");
+var myMap = new MyHashMap_1.MyHashMap();
 myMap.put("abc", 123);
 console.log(myMap.get("abc")); // 123
 myMap.put("abc", 5050);
