@@ -41,10 +41,21 @@ class MyHashMap {
   }
 
   get(key: string): any {
-    return undefined;
+    const index = this.getBucketIndex(key);
+    const bucket = this.buckets[index];
+
+    const value = bucket.get(key);
+    if (value !== undefined) {
+      return value;
+    }
+    throw new Error(`Key "${key}" not found in HashMap.`);
   }
 
   remove(key: string): void {
+    const index = this.getBucketIndex(key);
+    const bucket = this.buckets[index];
+
+    bucket.remove(key);
   }
 }
 
