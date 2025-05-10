@@ -1,4 +1,4 @@
-import { DoublyLinkedList } from "./doublyLinkedList";
+import { DoublyLinkedList } from "./DoublyLinkedList";
 import md5 from './hashFunctions/md5';
  
 class MyHashMap {
