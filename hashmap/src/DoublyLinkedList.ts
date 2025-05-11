@@ -53,16 +53,6 @@ class DoublyNode<K, V> {
       }
       return false;
     }
-  
-    print(): void {
-      const result: string[] = [];
-      let current = this.head;
-      while (current) {
-        result.push(`(${current.value.key}: ${current.value.value})`);
-        current = current.next;
-      }
-      console.log(result.join(' <-> '));
-    }
   }
   
 
